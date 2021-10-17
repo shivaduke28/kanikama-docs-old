@@ -1,6 +1,6 @@
 ---
 exclude: ['README.markdown']
-permalink: '/kanikama-docs/:categories/:title'
+permalink: ':categories/:title'
 highlighter: rouge
 safe: false
 title: 'KanikamaGI'
