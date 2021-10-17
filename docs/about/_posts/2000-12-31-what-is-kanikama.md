@@ -32,11 +32,11 @@ KanikamaGI is an OSS that implements such a "DIY" RealtimeGI. The method used he
 - Supports [Directional Mode](https://docs.unity3d.com/2019.4/Documentation/Manual/LightmappingDirectional.html).
 
 
-The following light sources are supported.
+### Supported light sources
 
 - Light components (Baked and Mixed)
 - Renderers with Emissive materials
-- Scene's Ambient Light
+- Ambient Light
 - Monitors / Screens
 
 ### Comparison with RealtimeGI
