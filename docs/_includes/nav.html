@@ -23,6 +23,14 @@
     </ul>
   </li>
 
+  <li><h2>Runtime</h2>
+    <ul>
+      {% for post in site.categories['runtime'] %}
+        <li class='{{ post.type }}'><a href='{{ post.url | relative_url }}'>{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </li>
+
   <li><h2>Udon</h2>
     <ul>
       {% for post in site.categories['udon'] %}
