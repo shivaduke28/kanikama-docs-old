@@ -393,10 +393,14 @@ textarea {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 1;
 }
 
-
+td {
+  padding: 5px 10px;
+  border: #e6e6e6 1px solid;
+  vertical-align: top;
+}
 
 /* GENERAL */
 html,
@@ -412,7 +416,7 @@ body,
 input,
 textarea {
   color: #191919;
-  font: 14px/140% 'Open Sans', Arial, sans-serif;
+  font: 16px/160% 'Open Sans', Arial, sans-serif;
 }
 
 a {
@@ -514,7 +518,7 @@ code {
 #content {
   padding: 20px;
   padding-left: 300px;
-  max-width: 700px;
+  max-width: 1000px;
 }
 
 #content .control {

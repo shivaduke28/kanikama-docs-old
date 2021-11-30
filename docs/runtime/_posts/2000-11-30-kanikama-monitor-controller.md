@@ -4,40 +4,30 @@ layout: default
 
 # KanikamaMonitorController
 
-The **KanikamaMonitorController** compoent is an example that can be specified as **LightSourceGroup** in the Inspector of the **KanikamaSceneDescriptor** component. This allows the monitor image to be dynamically reflected in the light map.
+Prefab path: `Assets/Kanikama/Prefabs/KanikamaMonitorCamera.prefab`
 
+The **KanikamaMonitorController** component is an example of **LightSourceGroup**. This allows a monitor image to be dynamically reflected in light maps.
 
-## How it works
+[![Image from Gyazo](https://i.gyazo.com/f41cb014232fd8046eac53eb54112bca.png)](https://gyazo.com/f41cb014232fd8046eac53eb54112bca)
 
-### Grid
-
-KanikamaGI does not reflect the monitor image directly to GI as Enlighten RealtimeGI does.
-Instead, KanikamaGI approximates RealtimeGI by dividing the monitor into several blocks (e.g., 2x2 or 3x3) and treating each block as a single light source.
-
-In the next image, the monitor is divided into 3x2 blocks.
-
-[![Image from Gyazo](https://i.gyazo.com/7f4519232a64f27c6190dd413f5540b8.gif)](https://gyazo.com/7f4519232a64f27c6190dd413f5540b8) 
-
-
-The average color of each block is calculated by capturing the monitor image through the Camera component and sampling it at its appropriate mipmap level.
-
-
-From left to right: monitor image, sampled colors, composited light map
-
-[![Image from Gyazo](https://i.gyazo.com/b05fed27fe246479c1dd9a8ed0c8a2b0.gif)](https://gyazo.com/b05fed27fe246479c1dd9a8ed0c8a2b0)
-
-
-
-### Capturing
-
-1. A camera placed in front of a monitor renders monitor.
-2. The camera ouputs it to a RenderTexture of 256x256 pixels.
-3. The event function **OnPostRender** of the Udon script **KanikamaCamera** attached to the Camera object is called.
-4. The Udon script calls the **Texture2D.ReadPixels** method of a Texture asset of 32x32 pixels.
-5. The Udon script call the **Texture2D.GetPixels** method of the texture and store colors.
-6. The Udon script **KanikamaColorCollector** collects colors from the **KanikamaCamera** object.
-
-<img src="https://i.gyazo.com/a5cc9c8b1a11238dd926f234dab2070b.png" width="800">
+|Property:|Function:|
+|-|-|
+|Camera|Reference to the Camera attached the the same GameObject.|
+|GridRendererPrefab|Specify a Prefab that will be used for blocks of grids.|
+|Partition Type|Specify which grid layout will be used to split monitors|
+|Main Monitor|A "main" KanikamaMonitorQuad.|
+|Sub Monitors|A list of "sub" KanikamaMonitors, that is, monitors displaying the same image as the Main Monitor. Not only the KanikamaMonitorQuad class but also user's custom classes extending the KanikamaMonitor class can be specified here.|
+|Camera Detailed Settings|The postion of the Camera relative to the Main Monitor and the Clipping Planes of the Camera.|
+|Traversed Grids|A lisf ot KanikamaMonitorGrids controlled by the object. This is set automatically by clicking "Setup" button in the Inspector window.|
 
 
 ## Setup
+
+Prefab path: `Assets/Kanikama/Prefabs/KanikamaMonitorCamera.prefab`
+
+1. Place the Prefab in your scene.
+2. Unpack the Prefab completely.
+3. Specify a Main Monitor.
+4. Select Partition Type (2x2 or 3x2 are recommended).
+5. Click the "Setup Lights and Camera" button in the Inspector window.
+6. Add it to the "Light Group Sources" property of a KanikamaSceneDescriptor.

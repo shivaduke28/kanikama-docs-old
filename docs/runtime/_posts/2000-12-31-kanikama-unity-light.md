@@ -9,3 +9,5 @@ Add this component to such a Light object and then register it in "Kanikama Ligh
 
 - **Baked** Mode and **Mixed** Mode are supported.
 - All Types (**Directinal**/**Point**/**Spot**/**Area**) are supported.
+
+[![Image from Gyazo](https://i.gyazo.com/63f2159ef1f8a5c5143714a053c7bc41.png)](https://gyazo.com/63f2159ef1f8a5c5143714a053c7bc41)
