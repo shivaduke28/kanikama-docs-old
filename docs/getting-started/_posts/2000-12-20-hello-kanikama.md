@@ -19,7 +19,7 @@ layout: default
 
 <img src="https://i.gyazo.com/cbe5c31c9c60c40b4e361fec095f7080.png" width=400>
 
-## Place KanikamaSceneDescriptor
+## KanikamaSceneDescriptor
 
 - Drag `Assets/Kanikama/Prefabs/KanikamaSceneDescriptor.prefab` to the Scene and unpack the Prefab completely.
 - Add two Lights created above to the **Kanikama Lights** property in the Inspector window of the KanikamaSceneDescriptor.
@@ -51,22 +51,24 @@ In tmp directory you can also see indivisual lightmaps that are not used at runt
 In the Console window, you can check Logs of the baking process.
 [![Image from Gyazo](https://i.gyazo.com/b3803d1044475bf941a29e4172c96792.png)](https://gyazo.com/b3803d1044475bf941a29e4172c96792)
 
-## Setup Receivers
-
-- Create a new Material and change its shader to **Kanikama/Standard**.
-- Change its **Kanikama Mode** to **Array**.
-- Set this Material to the Renderer of the Plane.
-
-[![Image from Gyazo](https://i.gyazo.com/e00f7c2788264cee889892fcb9630c97.png)](https://gyazo.com/e00f7c2788264cee889892fcb9630c97)
 
 ## Setup Udon scripts
 
 - Drag `Assets/Kanikama/Prefabs/KanikamaMapArrayProvider.prefab` to your Scene and unpack it completely.
 - Click the **Setup by KanikamaSettings asset** button in the Inspector window of the **KanikamaMapArrayProvider**.
 - Click the **Setup by KanikamaSceneDescriptor** button in the Inspector window of the **KanikamaColorCollector**.
-- Add the Renderer of the Plane to the **Receivers** property of the **KanikamaMapArrayProvider**.
 
 [![Image from Gyazo](https://i.gyazo.com/4918435b180f6e75e473825ae8aedba5.png)](https://gyazo.com/4918435b180f6e75e473825ae8aedba5)
+
+## Setup Receivers
+
+- Create a new Material and change its shader to **Kanikama/Standard**.
+- Change its **Kanikama Mode** to **Array**.
+- Set this Material to the Renderer of the Plane.
+- Add the Renderer to the **Receivers** property of the **KanikamaMapArrayProvider**.
+
+[![Image from Gyazo](https://i.gyazo.com/e00f7c2788264cee889892fcb9630c97.png)](https://gyazo.com/e00f7c2788264cee889892fcb9630c97)
+
 
 ## Hello World
 
