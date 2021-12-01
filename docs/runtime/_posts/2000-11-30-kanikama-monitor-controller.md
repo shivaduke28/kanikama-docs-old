@@ -20,10 +20,12 @@ The **KanikamaMonitorController** component is an example of **LightSourceGroup*
 |Camera Detailed Settings|The postion of the Camera relative to the Main Monitor and the Clipping Planes of the Camera.|
 |Traversed Grids|A lisf ot KanikamaMonitorGrids controlled by the object. This is set automatically by clicking "Setup" button in the Inspector window.|
 
-
+<br>
 ## Setup
 
 Prefab path: `Assets/Kanikama/Prefabs/KanikamaMonitorCamera.prefab`
+
+(For Bakery, use `Assets/Kanikama/Prefabs/Bakery/KanikamaBakeryMonitor.prefab`)
 
 1. Place the Prefab in your scene.
 2. Unpack the Prefab completely.
