@@ -11,7 +11,7 @@ Import Unity Packages into your Unity project in the following order:
 1. [VRC SDK3](https://vrchat.com/home/download)
 2. [MerlinVR/UdonSharp](https://github.com/MerlinVR/UdonSharp)
 3. [KanikamaGI](https://github.com/shivaduke28/kanikama/releases)
-4. [CyanLaser/CyanEmu](https://github.com/CyanLaser/CyanEmu) (recommended but not mandatory)
+4. [CyanLaser/CyanEmu](https://github.com/CyanLaser/CyanEmu) (not mandatory but recommended)
 
 ## 2. Project Settings
 
